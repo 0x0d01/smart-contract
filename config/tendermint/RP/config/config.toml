@@ -70,6 +70,7 @@ laddr = "tcp://0.0.0.0:47001"
 seeds = "127.0.0.1:47000,127.0.0.1:47001,127.0.0.1:47002"
 
 # Comma separated list of nodes to keep persistent connections to
+# Do not add private peers to this list if you don't want them advertised
 persistent_peers = ""
 
 # Path to address book
@@ -85,7 +86,7 @@ flush_throttle_timeout = 100
 max_num_peers = 50
 
 # Maximum size of a message packet payload, in bytes
-max_msg_packet_payload_size = 1024
+max_packet_msg_payload_size = 1024
 
 # Rate at which packets can be sent, in bytes/second
 send_rate = 512000
@@ -102,6 +103,12 @@ pex = true
 # Does not work if the peer-exchange reactor is disabled.
 seed_mode = false
 
+# Authenticated encryption
+auth_enc = true
+
+# Comma separated list of peer IDs to keep private (will not be gossiped to other peers)
+private_peer_ids = ""
+
 ##### mempool configuration options #####
 [mempool]
 
@@ -114,7 +121,6 @@ wal_dir = "data/mempool.wal"
 [consensus]
 
 wal_file = "data/cs.wal/wal"
-wal_light = false
 
 # All timeouts are in milliseconds
 timeout_propose = 3000
