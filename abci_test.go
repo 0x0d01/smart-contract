@@ -16,6 +16,7 @@ import (
 	"reflect"
 	"strings"
 	"testing"
+	"time"
 
 	"github.com/tendermint/tmlibs/common"
 )
@@ -482,6 +483,7 @@ func TestInitNDID(t *testing.T) {
 		t.Fatalf("FAIL: %s\nExpected: %#v\nActual: %#v", fnName, expected, actual)
 	}
 	t.Logf("PASS: %s", fnName)
+	time.Sleep(500 * time.Millisecond)
 }
 
 func TestRegisterNodeRP(t *testing.T) {

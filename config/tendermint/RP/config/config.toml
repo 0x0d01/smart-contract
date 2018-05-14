@@ -51,7 +51,7 @@ filter_peers = false
 [rpc]
 
 # TCP or UNIX socket address for the RPC server to listen on
-laddr = "tcp://0.0.0.0:45001"
+laddr = "tcp://127.0.0.1:45001"
 
 # TCP or UNIX socket address for the gRPC server to listen on
 # NOTE: This server only supports /broadcast_tx_commit
@@ -64,10 +64,10 @@ unsafe = false
 [p2p]
 
 # Address to listen for incoming connections
-laddr = "tcp://0.0.0.0:47001"
+laddr = "tcp://127.0.0.1:47001"
 
 # Comma separated list of seed nodes to connect to
-seeds = "127.0.0.1:47000,127.0.0.1:47001,127.0.0.1:47002"
+seeds = "6b7b3a891da01bd5eeedaa75a885bc83b3135f24@127.0.0.1:47000,8d029d2b94bae168105e2f36bd4a1c80698a41e9@127.0.0.1:47001"
 
 # Comma separated list of nodes to keep persistent connections to
 # Do not add private peers to this list if you don't want them advertised

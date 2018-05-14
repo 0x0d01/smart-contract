@@ -1,11 +1,19 @@
 {
   "genesis_time": "0001-01-01T00:00:00Z",
-  "chain_id": "test-chain-QeQs86",
+  "chain_id": "test-chain-NDID",
   "validators": [
     {
       "pub_key": {
         "type": "AC26791624DE60",
-        "value": "0bJgeq7zBxIwyE/Kx0R8Nt/K9YHE77e5AMK+oCijFo8="
+        "value": "Ve+qU3napOlCJHLYP/tnPb62SEeay2NgceMYd7/V+jY="
+      },
+      "power": 10,
+      "name": ""
+    },
+    {
+      "pub_key": {
+        "type": "AC26791624DE60",
+        "value": "GspLTAW4i9qvB8iYviNMnHWqAx2HSFLPEpFv+jMZwVs="
       },
       "power": 10,
       "name": ""

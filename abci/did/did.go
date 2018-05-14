@@ -71,6 +71,7 @@ func (app *DIDApplication) Info(req types.RequestInfo) (resInfo types.ResponseIn
 // Save the validators in the merkle tree
 func (app *DIDApplication) InitChain(req types.RequestInitChain) types.ResponseInitChain {
 	for _, v := range req.Validators {
+		fmt.Println(v.PubKey)
 		r := app.updateValidator(v)
 		if r.IsErr() {
 			fmt.Println("Error updating validators", "r", r)
