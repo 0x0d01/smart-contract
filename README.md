@@ -124,6 +124,16 @@ curl -s 'localhost:45000/broadcast_tx_commit?tx="val:Base64(PubKey)"'
     tendermint --home ./config/tendermint/AS unsafe_reset_all && tendermint --home ./config/tendermint/AS node --consensus.create_empty_blocks=false
     ```
 
+## Run in Docker
+Required
+- Docker CE [Install docker](https://docs.docker.com/install/)
+- docker-compose [Install docker-compose](https://docs.docker.com/compose/install/)
+
+```
+docker network create ndidplatform
+docker-compose up
+```
+    
 ## IMPORTANT NOTE
 
 1.  You must start IDP, RP and AS nodes in order to run the platform.
@@ -344,6 +354,30 @@ log: "success"
 log: "success"
 ```
 
+## CloseRequest
+### Parameter
+```sh
+{
+  "requestId": "ef6f4c9c-818b-42b8-8904-3d97c4c520f6"
+}
+```
+### Expected Output
+```sh
+log: "success"
+```
+
+## TimeOutRequest
+### Parameter
+```sh
+{
+  "requestId": "ef6f4c9c-818b-42b8-8904-3d97c4c11111"
+}
+```
+### Expected Output
+```sh
+log: "success"
+```
+
 # Query function
 
 ## GetNodePublicKey
@@ -435,6 +469,8 @@ log: "success"
 ```sh
 {
   "status": "pending",
+  "is_closed": false,
+  "is_timed_out": true,
   "messageHash": "hash('Please allow...')"
 }
 ```
