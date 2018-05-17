@@ -38,7 +38,8 @@ curl -s 'localhost:45000/broadcast_tx_commit?tx="val:Base64(PubKey)"'
 1.  Get dependency (tendermint ABCI)
 
     ```sh
-    go get -u github.com/tendermint/abci/cmd/abci-cli
+    cd $GOPATH/src/github.com/ndidplatform/smart-contract/abci
+    dep ensure
     ```
 
 2.  Create a directory for the project
